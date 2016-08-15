@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>计算机导论</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="renderer" content="webkit">
+    <!-- Le styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/loader-style.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/js/progress-bar/number-pb.css"> -->
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/minus.png">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+    <!-- TOP NAVBAR -->
+    <nav role="navigation" class="navbar navbar-static-top">
+        <div class="container-fluid">
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+
+                <ul style="margin-right:0;" class="nav navbar-nav navbar-right">
+                    <li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img alt="" class="admin-pic img-circle" src="http://api.randomuser.me/portraits/thumb/men/10.jpg">欢迎老师 <b class="caret"></b>
+                        </a>
+                        <ul style="margin-top:14px;" role="menu" class="dropdown-setting dropdown-menu">
+                            <li>
+                                <a href="#">
+                                    <span class="entypo-user"></span>&#160;&#160;教师信息</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="entypo-user"></span>&#160;&#160;教师查看</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="entypo-user"></span>&#160;&#160;教师留言</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="http://themeforest.net/item/apricot-navigation-admin-dashboard-template/7664475?WT.ac=category_item&WT.z_author=themesmile">
+                                    <span class="entypo-user"></span>&#160;&#160; 还有...</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="icon-gear"></span>&#160;&#160;设置
+                            <b class="caret"></b>
+                        </a>
+                        <ul role="menu" class="dropdown-setting dropdown-menu" id="bg_img">
+                            <li class="theme-bg">
+                                <div id="button-bg"></div>
+                                <div id="button-bg2"></div>
+                                <div id="button-bg3"></div>
+                                <div id="button-bg5"></div>
+                                <div id="button-bg6"></div>
+                                <div id="button-bg7"></div>
+                                <div id="button-bg8"></div>
+                                <div id="button-bg9"></div>
+                                <div id="button-bg10"></div>
+                                <div id="button-bg11"></div>
+                                <div id="button-bg12"></div>
+                                <div id="button-bg13"></div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- /END OF TOP NAVBAR -->
+
+    <!-- SIDE MENU -->
+    <div id="skin-select">
+        <div id="logo">
+         <h1>导论题测<span>v1.0</span></h1>
+        </div>
+        <!-- 隐藏侧边栏（功能未完善） -->
+        <a id="toggle">
+            <span class="entypo-menu"></span>
+        </a>
+        <!-- 搜索框展开状态 -->
+        <div class="dark">
+            <form action="#">
+                <span>
+                    <input type="text" name="search" value="" class="search rounded id_search" placeholder="Search Menu..." autofocus="">
+                </span>
+            </form>
+        </div>
+        <!-- 侧边栏隐藏时搜索框样式 -->
+        <div class="search-hover">
+            <form id="demo-2">
+                <input type="search" placeholder="Search Menu..." class="id_search">
+            </form>
+        </div>
+
+        <!-- slide menu -->
+        <div class="skin-part">
+            <div id="tree-wrap">
+                <div class="side-bar">
+                    <ul class="topnav menu-left-nest">
+                        <li>
+                            <a href="javascript:void(0);" style="border-left:0px solid!important;" class="title-menu-left">
+
+                                <span>创建问卷</span>
+                                <i data-toggle="tooltip" class="glyphicon glyphicon-menu-up
+                                 pull-right config-wrap"></i>
+                            </a>
+                            <ul>
+                                <li  id="cl_prv1">
+                                    <a class="tooltip-tip ajax-load" href="#" title="课前预习" id="prv">
+                                    <i class="glyphicon glyphicon-user"></i>
+                                    <span>课前预习</span><span id="item1_clicked" class="prac"></span>
+                                    </a>
+                                </li>
+
+                                <li id="cl_prv2">
+                                    <a class="tooltip-tip ajax-load" href="#" title="课后练习" id="aft_prc">
+                                        <i class="glyphicon glyphicon-transfer"></i>
+                                        <span>课后练习</span><span id="item2_clicked" class="prac"></span>
+                                    </a>
+                                </li>
+
+                                <li  id="cl_prv3">
+                                    <a class="tooltip-tip ajax-load" href="#" title="实验题测" id="exper">
+                                        <i class="glyphicon glyphicon-book"></i>
+                                        <span>实验题测</span><span id="item3_clicked" class="prac"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    <ul id="menu-showhide" class="topnav menu-left-nest">
+                        <li>
+                            <a href="javascript:void(0);" style="border-left:0px solid!important;" class="title-menu-left">
+                                <span>填写分数</span>
+                                <i data-toggle="tooltip" class="glyphicon glyphicon-menu-up
+                                 pull-right config-wrap"></i>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a class="tooltip-tip2 ajax-load" href="#" title="Element"><i class="icon-attachment"></i><span>单独填写</span></a>
+                                </li>
+
+                                <li>
+                                    <a class="tooltip-tip2 ajax-load" href="button.html" title="Button"><i class="icon-view-list-large"></i><span>多人填写</span> </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                     <ul id="menu-showhide" class="topnav menu-left-nest">
+                        <li>
+                            <a href="javascript:void(0);" style="border-left:0px solid!important;" class="title-menu-left">
+                                <span>查看分数</span>
+                                <i data-toggle="tooltip" class="glyphicon glyphicon-menu-up
+                                 pull-right config-wrap"></i>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a class="tooltip-tip ajax-load" href="#" title="Tables">
+                                        <i class="icon-view-thumb"></i>
+                                        <span>上次操作</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip ajax-load" href="#" title="UI Element">
+                                        <i class="icon-monitor"></i>
+                                        <span>查看总成绩</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="topnav menu-left-nest">
+                        <li>
+                            <a href="javascript:void(0);" style="border-left:0px solid!important;display" class="title-menu-left">
+                                <span>意见反馈</span>
+                                <i data-toggle="tooltip" class="glyphicon glyphicon-menu-up
+                                 pull-right config-wrap"></i>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a class="tooltip-tip ajax-load" href="#" title="Blog App">
+                                        <i></i>
+                                        <span>意见提交</span>
+                                     </a>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip ajax-load" href="social.html" title="Social">
+                                        <i></i>
+                                        <span>意见回复</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END OF SIDE MENU -->
+
+    <!--  PAPER WRAP -->
+    <div class="wrap-fluid">
+        <div class="container-fluid paper-wrap bevel tlbr">
+            <div class="col-lg-1 col-md-1 col-sm-1">
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10" id="wel_info">
+                <span>欢迎老师</span><br>请在右侧选择要进行的操作
+
+            </div>
+        </div>
+    </div>
+    <!--  END OF PAPER WRAP -->
+
+
+    <!-- END OF RIGHT SLIDER CONTENT-->
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.form.js"></script>
+    <!-- MAIN EFFECT -->
+    <script type="text/javascript" src="assets/js/preloader.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/load.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/create-questions/class_pre.js"></script>
+    <script type="text/javascript" src="assets/js/create-questions/after_practice.js"></script>
+    <script type="text/javascript" src="assets/js/create-questions/experiments.js"></script>
+
+    <script type="text/javascript">
+    $(function() {
+        $('ul li .title-menu-left').click(function() {
+            if ($(this).find('i').hasClass('glyphicon-menu-down')) {
+                $(this).find('i').removeClass('glyphicon-menu-down').addClass('glyphicon-menu-up');
+            } else {
+                $(this).find('i').removeClass('glyphicon-menu-up').addClass('glyphicon-menu-down');
+            }
+            $(this).parent().parent().siblings().find('li a .config-wrap').removeClass('glyphicon-menu-down').addClass('glyphicon-menu-up');
+        });
+        $('#skin-select ul li ul li').click(function() {
+            $('#slin-select ul li ul li a i:before').addClass('click_style');
+        });
+
+        // 点击标识函数
+        function identifying(e) {
+            e.siblings('li').find('span').removeClass('item_clic');
+            e.find('.prac').addClass('item_clic');
+        }
+        $('#cl_prv1, #cl_prv2, #cl_prv3').click(function() {
+            identifying($(this));
+        });
+    });
+    </script>
+    <script type="text/javascript">
+    var output, started, duration, desired;
+    // Constants
+    duration = 5000;
+    desired = '50';
+
+    // Initial setup
+    output = $('#speed');
+    started = new Date().getTime();
+
+    // Animate!
+    animationTimer = setInterval(function() {
+        // If the value is what we want, stop animating
+        // or if the duration has been exceeded, stop animating
+        if (output.text().trim() === desired || new Date().getTime() - started > duration) {
+            // Generate a random string to use for the next animation step
+            output.text('' + Math.floor(Math.random() * 60)
+
+            );
+
+        } else {
+            console.log('animating');
+            // Generate a random string to use for the next animation step
+            output.text('' + Math.floor(Math.random() * 120)
+
+            );
+        }
+    }, 5000);
+    </script>
+</body>
+</html>
